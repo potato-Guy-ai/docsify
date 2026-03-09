@@ -54,7 +54,7 @@ left:-260px;
 width:260px;
 height:100%;
 
-background:var(--card2);
+background:var(--card);
 
 border-right:1px solid var(--border);
 
@@ -106,7 +106,7 @@ transition:0.2s;
 
 .menu a:hover{
 
-background:var(--card);
+background:var(--card2);
 
 }
 

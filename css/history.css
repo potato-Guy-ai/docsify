@@ -131,7 +131,7 @@ color:var(--muted);
 .code-input,
 .generated-doc{
 
-background:#020617;
+background: var(--input);
 
 padding:16px;
 
@@ -234,7 +234,7 @@ font-size:28px;
 
 cursor:pointer;
 
-color:white;
+color: var(--text);
 
 z-index:1001;
 
@@ -252,7 +252,7 @@ left:-250px;
 width:250px;
 height:100vh;
 
-background:#020617;
+background:var(--card);
 
 padding:30px 20px;
 
@@ -267,6 +267,7 @@ z-index:1002;
 
 border-right:1px solid #334155;
 
+
 }
 
 .sidebar.open{
@@ -279,7 +280,7 @@ left:0;
 
 text-decoration:none;
 
-color:#cbd5f5;
+color: var(--text);
 
 font-size:16px;
 
@@ -293,13 +294,13 @@ transition:0.2s;
 
 .sidebar a:hover{
 
-background:#1e293b;
+background: var(--card2);
 
 }
 
 .logo{
 
-color:white;
+color: var(--text);
 margin-bottom:20px;
 
 }

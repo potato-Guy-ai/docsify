@@ -32,7 +32,7 @@ font-size:28px;
 
 cursor:pointer;
 
-color:white;
+color: var(--text);
 
 z-index:1001;
 
@@ -50,7 +50,7 @@ left:-250px;
 width:250px;
 height:100vh;
 
-background:#020617;
+background: var(--card);
 
 padding:30px 20px;
 
@@ -75,11 +75,11 @@ left:0;
 
 text-decoration:none;
 
-color:#cbd5f5;
+color: var(--text);
 
 font-size:16px;
-
-padding:8px 5px;
+display: block;
+padding: 10px;
 
 border-radius:6px;
 
@@ -88,11 +88,11 @@ transition:0.2s;
 }
 
 .sidebar a:hover{
-background:#1e293b;
+background: var(--card2);
 }
 
 .logo{
-color:white;
+color: var(--text);
 margin-bottom:20px;
 }
 
