@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Docstring Generator</title>
     <link rel="stylesheet" href="../css/index.css">
 </head>
+
 <body>
-    
+
+    <!-- NAVBAR -->
+
     <nav>
         <div class="links">
+
             <ol>
-                <li><a href="">Home</a></li>
-                <li><a href="">Products</a></li>
-                <li><a href="">Pricing</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#pricing">Pricing</a></li>
             </ol>
-            <h1  id="title">Docsify</h1>
+
+            <h1 id="title">Docsify</h1>
+
             <ol>
-                <li><a href="">Join Us</a></li>
+                <li><a href="#join">Join Us</a></li>
                 <li><a href="signin.html">Sign In</a></li>
                 <li><a href="login.html">Log In</a></li>
             </ol>
@@ -25,17 +32,107 @@
         </div>
     </nav>
 
-    <div class="hero">
+
+    <!-- HOME SECTION -->
+
+    <section id="home" class="hero">
+
         <div class="header">
             <h1>WELCOME TO DOCSIFY</h1>
-            <h3>Write a docstring for your code without efforts</h3>
+            <h3>Write a docstring for your code without effort</h3>
+
             <button id="try-now-btn">Try Now</button>
-            <button>Talk us</button>
+            <button>Talk to us</button>
+
         </div>
-    </div>
+
+    </section>
+
+
+    <!-- PRODUCTS SECTION -->
+
+    <section id="products" class="section">
+
+        <h2>Our Products</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>AI Docstring Generator</h3>
+                <p>Generate clean Python docstrings instantly using powerful AI models.</p>
+            </div>
+
+            <div class="card">
+                <h3>Code History</h3>
+                <p>Store and revisit previously generated documentation anytime.</p>
+            </div>
+
+            <div class="card">
+                <h3>Developer Tools</h3>
+                <p>Speed up documentation workflow for teams and developers.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRICING SECTION -->
+
+    <section id="pricing" class="section">
+
+        <h2>Pricing</h2>
+
+        <div class="pricing-container">
+
+            <div class="price-card">
+                <h3>Free</h3>
+                <p class="price">$0</p>
+                <p>Basic docstring generation</p>
+                <p>Limited usage</p>
+            </div>
+
+            <div class="price-card popular">
+                <h3>Pro</h3>
+                <p class="price">$9/mo</p>
+                <p>Unlimited generation</p>
+                <p>History storage</p>
+                <p>Priority AI speed</p>
+            </div>
+
+            <div class="price-card">
+                <h3>Team</h3>
+                <p class="price">$29/mo</p>
+                <p>Team collaboration</p>
+                <p>Shared documentation</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- JOIN SECTION -->
+
+    <section id="join" class="section">
+
+        <h2>Join the Docsify Community</h2>
+
+        <p>Start generating professional docstrings for your code today.</p>
+
+        <button onclick="window.location.href='signin.html'">
+            Create Free Account
+        </button>
+
+    </section>
+
+
     <footer>
         <h3>@copyrights afrith 2026</h3>
     </footer>
+
     <script src="../scripts/index.js"></script>
+
 </body>
+
 </html>

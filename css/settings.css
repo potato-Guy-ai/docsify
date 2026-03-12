@@ -1,259 +1,381 @@
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:"Segoe UI",sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
 }
 
-body{
-
-background:var(--bg);
-color:var(--text);
-
-min-height:100vh;
-
-display:flex;
-justify-content:center;
-align-items:center;
+body {
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
 /* HAMBURGER */
 
-.hamburger{
+.hamburger {
 
-position:fixed;
+    position: fixed;
 
-top:20px;
-left:20px;
+    top: 20px;
+    left: 20px;
 
-font-size:28px;
+    font-size: 28px;
 
-cursor:pointer;
+    cursor: pointer;
 
-color: var(--text);
+    color: var(--text);
 
-z-index:1001;
+    z-index: 1001;
 
 }
 
 /* SIDEBAR */
 
-.sidebar{
+.sidebar {
 
-position:fixed;
+    position: fixed;
 
-top:0;
-left:-250px;
+    top: 0;
+    left: -250px;
 
-width:250px;
-height:100vh;
+    width: 250px;
+    height: 100vh;
 
-background: var(--card);
+    background: var(--card);
 
-padding:30px 20px;
+    padding: 30px 20px;
 
-display:flex;
-flex-direction:column;
+    display: flex;
+    flex-direction: column;
 
-gap:18px;
+    gap: 18px;
 
-transition:0.3s;
+    transition: 0.3s;
 
-z-index:1002;
+    z-index: 1002;
 
-border-right:1px solid #334155;
-
-}
-
-.sidebar.open{
-left:0;
-}
-
-.sidebar a{
-
-text-decoration:none;
-
-color: var(--text);
-
-font-size:16px;
-display: block;
-padding: 10px;
-
-border-radius:6px;
-
-transition:0.2s;
+    border-right: 1px solid #334155;
 
 }
 
-.sidebar a:hover{
-background: var(--card2);
+.sidebar.open {
+    left: 0;
 }
 
-.logo{
-color: var(--text);
-margin-bottom:20px;
+.sidebar a {
+
+    text-decoration: none;
+
+    color: var(--text);
+
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+
+    border-radius: 6px;
+
+    transition: 0.2s;
+
+}
+
+.sidebar a:hover {
+    background: var(--card2);
+}
+
+.logo {
+    color: var(--text);
+    margin-bottom: 20px;
 }
 
 /* OVERLAY */
 
-.overlay{
+.overlay {
 
-position:fixed;
+    position: fixed;
 
-top:0;
-left:0;
+    top: 0;
+    left: 0;
 
-width:100%;
-height:100%;
+    width: 100%;
+    height: 100%;
 
-background:rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
 
-opacity:0;
-visibility:hidden;
+    opacity: 0;
+    visibility: hidden;
 
-transition:0.3s;
+    transition: 0.3s;
 
-z-index:1000;
+    z-index: 1000;
 
 }
 
-.overlay.show{
-opacity:1;
-visibility:visible;
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* MAIN CONTAINER */
 
-.container{
+.container {
 
-width:500px;
+    width: 500px;
 
-background:var(--card);
+    background: var(--card);
 
-padding:35px;
+    padding: 35px;
 
-border-radius:16px;
+    border-radius: 16px;
 
-border:1px solid var(--border);
+    border: 1px solid var(--border);
 
 }
 
 /* TITLE */
 
-.title{
+.title {
 
-font-size:26px;
-margin-bottom:25px;
+    font-size: 26px;
+    margin-bottom: 25px;
 
 }
 
 /* SETTINGS SECTIONS */
 
-.settings-section{
+.settings-section {
 
-margin-bottom:25px;
+    margin-bottom: 25px;
 
-padding-bottom:20px;
+    padding-bottom: 20px;
 
-border-bottom:1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 
 }
 
-.settings-section h3{
+.settings-section h3 {
 
-margin-bottom:12px;
+    margin-bottom: 12px;
 
-font-size:18px;
+    font-size: 18px;
 
 }
 
 /* SETTING ITEM */
 
-.setting-item{
+.setting-item {
 
-display:flex;
+    display: flex;
 
-justify-content:space-between;
+    justify-content: space-between;
 
-align-items:center;
+    align-items: center;
 
 }
 
 /* THEME OPTIONS */
 
-.theme-options{
+.theme-options {
 
-display:flex;
+    display: flex;
 
-gap:15px;
+    gap: 15px;
 
-font-size:14px;
+    font-size: 14px;
 
-color:var(--muted);
+    color: var(--muted);
 
 }
 
 /* BUTTONS */
 
-button{
+button {
 
-padding:9px 16px;
+    padding: 9px 16px;
 
-border:none;
+    border: none;
 
-border-radius:8px;
+    border-radius: 8px;
 
-font-size:14px;
+    font-size: 14px;
 
-cursor:pointer;
+    cursor: pointer;
 
-transition:0.2s;
+    transition: 0.2s;
 
 }
 
 /* CHANGE PASSWORD */
 
-.change-password{
+.change-password {
 
-background:var(--accent);
-color:white;
+    background: var(--accent);
+    color: white;
 
 }
 
-.change-password:hover{
-background:var(--accent-hover);
+.change-password:hover {
+    background: var(--accent-hover);
 }
 
 /* CLEAR HISTORY */
 
-.clear-history{
+.clear-history {
 
-background:#3b82f6;
-color:white;
+    background: #3b82f6;
+    color: white;
 
 }
 
-.clear-history:hover{
-background:#2563eb;
+.clear-history:hover {
+    background: #2563eb;
 }
 
 /* DANGER ZONE */
 
-.danger h3{
-color:var(--danger);
+.danger h3 {
+    color: var(--danger);
 }
 
 /* DELETE ACCOUNT */
 
-.delete-account{
+.delete-account {
 
-background:var(--danger);
-color:white;
+    background: var(--danger);
+    color: white;
 
 }
 
-.delete-account:hover{
-background:var(--danger-hover);
+.delete-account:hover {
+    background: var(--danger-hover);
+}
+
+/* MODAL */
+
+.modal {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    z-index: 2000;
+
+}
+
+.modal.show {
+
+    opacity: 1;
+    visibility: visible;
+
+}
+
+
+/* MODAL CARD */
+
+.modal-card {
+
+    background: var(--card);
+
+    padding: 30px;
+
+    border-radius: 14px;
+
+    border: 1px solid var(--border);
+
+    width: 320px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+.modal-card input {
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    border: 1px solid var(--border);
+
+    background: var(--bg-input);
+
+    color: var(--text);
+
+}
+
+
+/* ACTION BUTTONS */
+
+.modal-actions {
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+}
+
+.modal-actions button {
+
+    padding: 8px 14px;
+
+    border-radius: 6px;
+
+    border: none;
+
+    cursor: pointer;
+
+}
+
+
+/* DELETE STYLE */
+
+.danger-card h3 {
+
+    color: var(--danger);
+
+}
+
+#confirm-delete {
+
+    background: var(--danger);
+    color: white;
+
+}
+
+#confirm-delete:hover {
+
+    background: var(--danger-hover);
+
+}
+
+#update-pass {
+
+    background: var(--accent);
+    color: white;
+
+}
+
+#update-pass:hover {
+
+    background: var(--accent-hover);
+
 }

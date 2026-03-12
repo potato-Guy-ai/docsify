@@ -1,86 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Docsify | Python Docstring Generator</title>
-<link rel="stylesheet" href="../css/theme.css">
-<link rel="stylesheet" href="../css/generator.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docsify | Python Docstring Generator</title>
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/generator.css">
 </head>
 
 <body>
 
-<!-- Overlay -->
-<div class="overlay" id="overlay"></div>
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
 
-<!-- Sidebar -->
-<aside class="sidebar" id="sidebar">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
 
-    <h2 class="logo">Docsify</h2>
+        <h2 class="logo">Docsify</h2>
 
-    <ul class="menu">
+        <ul class="menu">
 
-        <li><a href="generator.html">Generator</a></li>
-        <li><a href="history.html">History</a></li>
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="settings.html">Settings</a></li>
-        <li class="logout"><a href="#">Logout</a></li>
-    </ul>
+            <li><a href="generator.html">Generator</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li class="logout" id="logout-btn"><a href="#">Logout</a></li>
+        </ul>
 
-</aside>
+    </aside>
 
 
-<nav>
+    <nav>
 
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger">
-        ☰
+        <!-- Hamburger -->
+        <div class="hamburger" id="hamburger">
+            ☰
+        </div>
+
+        <h1 id="title">Docsify</h1>
+
+    </nav>
+
+
+    <div class="container">
+
+        <header class="page-header">
+            <h1>Python Docstring Generator</h1>
+            <p>Generate professional docstrings for your Python functions instantly</p>
+        </header>
+
+
+        <section class="input-section">
+
+            <h3>Python Code</h3>
+
+            <textarea id="code-input" placeholder="Paste your Python function here..."></textarea>
+
+            <button id="generate-btn">
+                <span id="btn-text">Generate Docstring</span>
+                <span id="loader" class="loader"></span>
+            </button>
+        </section>
+
+
+        <section class="output-section">
+
+            <h3>Generated Docstring</h3>
+
+            <textarea id="docstring-output" placeholder="Generated docstring will appear here..." readonly></textarea>
+
+            <button id="copy-btn">
+                Copy
+            </button>
+
+        </section>
+
     </div>
+    <script src="../scripts/auth.js"></script>
 
-    <h1 id="title">Docsify</h1>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="../scripts/supabase.js"></script>
 
-</nav>
-
-
-<div class="container">
-
-<header class="page-header">
-<h1>Python Docstring Generator</h1>
-<p>Generate professional docstrings for your Python functions instantly</p>
-</header>
-
-
-<section class="input-section">
-
-<h3>Python Code</h3>
-
-<textarea id="code-input"
-placeholder="Paste your Python function here..."></textarea>
-
-<button id="generate-btn">
-<span id="btn-text">Generate Docstring</span>
-<span id="loader" class="loader"></span>
-</button>
-</section>
-
-
-<section class="output-section">
-
-<h3>Generated Docstring</h3>
-
-<textarea id="docstring-output"
-placeholder="Generated docstring will appear here..."
-readonly></textarea>
-
-<button id="copy-btn">
-Copy
-</button>
-
-</section>
-
-</div>
-<script src="../scripts/theme.js"></script>
-<script type="module" src="../scripts/generator.js"></script>
+    <script src="../scripts/theme.js"></script>
+    <script type="module" src="../scripts/generator.js"></script>
 
 </body>
+
 </html>

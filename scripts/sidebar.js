@@ -4,14 +4,14 @@ const overlay = document.getElementById("overlay")
 
 hamburger.addEventListener("click", () => {
 
-sidebar.classList.toggle("open")
-overlay.classList.toggle("show")
+    sidebar.classList.toggle("open")
+    overlay.classList.toggle("show")
 
 })
 
 overlay.addEventListener("click", () => {
 
-sidebar.classList.remove("open")
-overlay.classList.remove("show")
+    sidebar.classList.remove("open")
+    overlay.classList.remove("show")
 
 })

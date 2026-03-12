@@ -1,11 +1,32 @@
-const userName = document.querySelector("#username");
-const userMail = document.querySelector("#usermail");
-const userPass = document.querySelector("#userpass");
-const sumbitBtn = document.querySelector("#submit-btn")
+const form = document.querySelector("#signup-form")
 
+form.addEventListener("submit", async (e) => {
 
-sumbitBtn.addEventListener('click', ()=>{
-    if(userPass.length < 10){
-        alert("Password must be 10 characters")
+    e.preventDefault()
+
+    const name = document.querySelector('#username').value
+    const email = document.querySelector("#usermail").value
+    const password = document.querySelector("#userpass").value
+
+    const { data, error } = await supabaseClient
+        .from("users")
+        .insert([
+            {
+                username: name,
+                email: email,
+                password: password
+            }
+        ])
+
+    if (error) {
+
+        alert("Signup failed")
+
+    } else {
+
+        alert("Account created successfully")
+        window.location.href = "login.html"
+
     }
+
 })
