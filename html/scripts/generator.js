@@ -29,7 +29,7 @@ async function generateDocstring() {
 
     try {
 
-        const res = await fetch("../.netlify/functions/generate", {
+        const res = await fetch("/.netlify/functions/generate", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
