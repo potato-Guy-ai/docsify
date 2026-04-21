@@ -68,12 +68,12 @@ Returns:
 
     }
     catch (error) {
+    console.error("ERROR:", error)
 
-        return {
-            statusCode: 500,
-            body: JSON.stringify({ error: "Generation failed" })
-        }
-
+    return {
+        statusCode: 500,
+        body: JSON.stringify({
+            error: error.message || "Generation failed"
+        })
     }
-
 }
