@@ -18,6 +18,8 @@ exports.handler = async function (event) {
             }
         }
 
+        console.log("Received code:", code)
+
         const completion = await groq.chat.completions.create({
 
             model: "llama-3.1-8b-instant",
@@ -59,6 +61,12 @@ Returns:
             max_tokens: 300
         })
 
+        console.log("Groq response:", completion)
+
+        if (!completion || !completion.choices || !completion.choices[0]) {
+            throw new Error("Invalid response from Groq API")
+        }
+
         const docstring = completion.choices[0].message.content.trim()
 
         return {
@@ -66,14 +74,16 @@ Returns:
             body: JSON.stringify({ docstring })
         }
 
-    }
-    catch (error) {
-    console.error("ERROR:", error)
+    } catch (error) {
 
-    return {
-        statusCode: 500,
-        body: JSON.stringify({
-            error: error.message || "Generation failed"
-        })
+        console.error("ERROR:", error)
+
+        return {
+            statusCode: 500,
+            body: JSON.stringify({
+                error: error.message || "Generation failed"
+            })
+        }
     }
-}
+
+} // ✅ THIS WAS MISSING
